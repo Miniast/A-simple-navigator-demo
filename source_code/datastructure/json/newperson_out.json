@@ -1,0 +1,14 @@
+{
+    "pName": "test",
+    "pStartTime": 100,
+    "pLen": 15, // -1 表示无解， 0 表示起点、终点相同
+    "point": [
+        {"camp": 0, "id": 0},
+        {"camp": 0, "id": 2},
+        {"camp": 0, "id": 4},
+        {"camp": 1, "id": 10},
+        {"camp": 1, "id": 16}
+    ],
+    "pTime": 1000,
+    "pLength": 100.0
+}

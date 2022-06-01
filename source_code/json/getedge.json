@@ -1,0 +1,25 @@
+{
+    "eEdge": [
+        {
+            "eType": 1, // FOOT 0, BICYCLE 1, BUS 2, assert(eType != 2)
+            "eCampus": 1,
+            "eStart": 2,
+            "eEnd": 5,
+            "eCrowd": 0.1
+        },
+        {
+            "eType": 1,
+            "eCampus": 1,
+            "eStart": 2,
+            "eEnd": 5,
+            "eCrowd": 0.1
+        },
+        {
+            "eType": 1,
+            "eCampus": 1,
+            "eStart": 2,
+            "eEnd": 5,
+            "eCrowd": 0.1
+        }
+    ]
+}
