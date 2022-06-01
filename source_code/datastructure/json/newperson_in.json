@@ -1,0 +1,30 @@
+{
+    "pStrategy": 0,
+    "pType": 0,
+    "pName": "test",
+    "pStCamp": 0, // 0 沙河 1 西土城
+    "pStId": 10,
+    "pEnCamp": 1,
+    "pEnId": 15,
+    "pStartTime": 100,
+
+    //更改终点用到以下部分
+    "isChange": 0,//0 表示同原来一样处理，
+    //1时， pNowX和 pNowY 表示起始点（当前位置坐标）
+    //pStId必定为127，pStCamp表示所在校区
+    //pEn正常处理，为更改后的终点，其他属性正常 
+    "pNowX": 123.4,
+    "pNowY": 123.4213,
+    
+    //多重选点模式用到以下部分
+    "isTravel": 0, // 0 原来的 1 新模式
+    // 如果istravel为0，以下无意义
+    // 如果istravel为1，"pStCamp", "pStId", "pEnCamp": 1, "pEnId"无意义
+    "cnt": 123, // 总的点数，第一个表示起点，最后一个表示重点
+    "pNode": [
+        {"pCamp": 0, "pId": 10},
+        {"pCamp": 0, "pId": 10},
+        {"pCamp": 0, "pId": 10},
+        {"pCamp": 0, "pId": 10}
+    ]
+}

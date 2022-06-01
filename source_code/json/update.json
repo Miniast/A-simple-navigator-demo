@@ -1,0 +1,5 @@
+{
+    "type": 1, // 0 stop, 1 foot, 2 bicycle, 3 bus
+    "camp": 1,
+    "point": [1.12, 3.11]
+}

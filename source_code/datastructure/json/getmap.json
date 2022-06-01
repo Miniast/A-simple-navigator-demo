@@ -1,0 +1,25 @@
+{
+    "nPoint": [
+        {
+            "nCampus": 1,
+            "nId": 1,
+            "nName": "test",
+            "x": 12.1,
+            "y": 13.23
+        },
+        {
+            "nCampus": 1,
+            "nId": 1,
+            "nName": "test",
+            "x": 12.1,
+            "y": 13.23
+        },
+        {
+            "nCampus": 1,
+            "nId": 1,
+            "nName": "test",
+            "x": 12.1,
+            "y": 13.23
+        }
+    ]
+}

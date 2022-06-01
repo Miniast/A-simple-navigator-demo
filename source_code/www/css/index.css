@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(../image/bupt.jpeg) no-repeat top center;
+  background-size: cover;
+  line-height: 0.5rem;
+}
+option {
+  font-size: 0.15rem;
+}
+header {
+  position: relative;
+  height: 1.25rem;
+  background-color: rgba(17, 230, 219, 0.7);
+  background-size: 100% 100%;
+}
+header h1 {
+  top: 0.1875rem;
+  font-size: 0.475rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.25rem;
+}
+header .showTime {
+  position: absolute;
+  top: 0.15rem;
+  right: 0.5rem;
+  line-height: 0.9375rem;
+  font-size: 0.25rem;
+  color: #ffffff;
+}
+p {
+  font-size: 0.375rem;
+  font-weight: 500;
+  margin: 0;
+}
+li {
+  font-size: 0.3rem;
+  font-weight: 500;
+  margin: 0.2rem 0;
+}
+input {
+  background-color: whitesmoke;
+  line-height: 0.5rem;
+  width: 1.5rem;
+  margin-bottom: 0.125rem;
+  border: none;
+  border-radius: 0.0625rem;
+}
+label {
+  position: relative;
+  margin: 0.0625rem 0;
+  cursor: pointer;
+}
+label input {
+  appearance: none;
+  display: none;
+}
+label span {
+  position: relative;
+  display: block;
+  width: 1rem;
+  height: 0.5rem;
+  background-color: #fffffb;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 2px 0.1875rem rgba(0, 0, 0, 0.116), inset 0 2px 2px rgba(0, 0, 0, 0.116), inset 0 -1px 1px rgba(0, 0, 0, 0.116);
+}
+label .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: linear-gradient(to bottom, #444, #222);
+  border-radius: 50%;
+  box-shadow: 0 2px 0.1875rem rgba(245, 245, 245, 0.418), inset 0 1px 1px #f6f5ec;
+  transition: 0.5s;
+  transform: scale(0.9);
+}
+label input:checked ~ .indicator {
+  left: 0.5rem;
+}
+label .indicator::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 0.1rem;
+  height: 0.1rem;
+  background: #f00;
+  border-radius: 50%;
+  box-shadow: 0 0 0.025rem #f00, 0 0 0.125rem #f00, 0 0 0.1875rem #f00, 0 0 0.25rem #f00, 0 0 0.3125rem #f00, 0 0 0.375rem #f00;
+}
+label input:checked ~ .indicator::before {
+  background: #0f0;
+  border-radius: 50%;
+  box-shadow: 0 0 0.025rem #0f0, 0 0 0.125rem #0f0, 0 0 0.1875rem #0f0, 0 0 0.25rem #0f0, 0 0 0.3125rem #0f0, 0 0 0.375rem #0f0;
+}
+.mybtn_confirm {
+  font-size: 0.25rem;
+  margin: 0.125rem 0.125rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+.mybtn_pause {
+  font-size: 0.25rem;
+  margin: 0.125rem 0.125rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+.mybtn_continue {
+  font-size: 0.25rem;
+  margin: 0.125rem 0.125rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+.mainbox {
+  display: flex;
+  min-width: 12.8rem;
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 0.125rem 0.125rem 0;
+}
+.mainbox .column {
+  margin-top: 0.125rem;
+}
+.mainbox .column:nth-child(1) {
+  flex: 1;
+  height: 12rem;
+  text-align: left;
+}
+.mainbox .column:nth-child(1) .topbox {
+  height: 7.8rem;
+  padding: 0.5rem 0.5rem;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+  margin-bottom: 0.5rem;
+}
+.mainbox .column:nth-child(1) .topbox .input-span {
+  font-size: 0.175rem;
+}
+.mainbox .column:nth-child(1) .topbox .input-list {
+  margin: 0.2rem 0;
+  font-size: 0;
+}
+.mainbox .column:nth-child(1) .topbox .input-list .selectlist {
+  display: inline-block;
+  font-size: 0.175rem;
+  height: 100%;
+  max-width: 3.5rem;
+}
+.mainbox .column:nth-child(1) .topbox .container {
+  position: relative;
+  font-size: 0.2rem;
+  width: 100%;
+  height: 0.9rem;
+  margin: 0.2rem 0;
+  padding-left: 0;
+}
+.mainbox .column:nth-child(1) .topbox .container #decrease {
+  position: absolute;
+  height: 0.6rem;
+  width: 0.6rem;
+  margin-left: 0;
+  left: 1.5rem;
+  top: -0.0625rem;
+  background-color: #FF6666;
+  font-size: 0.35rem;
+}
+.mainbox .column:nth-child(1) .topbox .container #increase {
+  position: absolute;
+  height: 0.6rem;
+  width: 0.6rem;
+  margin-left: 0;
+  left: 3.7rem;
+  top: -0.0625rem;
+  background-color: #66CC99;
+  font-size: 0.35rem;
+}
+.mainbox .column:nth-child(1) .topbox .container #getnumber {
+  position: absolute;
+  height: 0.6rem;
+  width: 1.2rem;
+  left: 2.3rem;
+  top: -0.0625rem;
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+  margin: 0;
+  border: 2px solid silver;
+  background-color: whitesmoke;
+}
+.mainbox .column:nth-child(1) .topbox .container .button-confirm {
+  font-size: 0.25rem;
+  width: 1.3rem;
+  height: 0.7rem;
+  margin: 0 0.4rem 0 0.4rem;
+  padding: 0.0625rem 0.0625rem;
+  border-radius: 0.0625rem;
+}
+.mainbox .column:nth-child(1) .topbox .container .button-reset {
+  font-size: 0.25rem;
+  width: 1.6rem;
+  height: 0.7rem;
+  margin: 0 0 0 0;
+  padding: 0.0625rem 0.0625rem;
+  border-radius: 0.0625rem;
+}
+.mainbox .column:nth-child(1) .bottombox {
+  position: relative;
+  height: 2.6rem;
+  padding: 0.5rem 0.5rem;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  border-radius: 0.3125rem;
+}
+.mainbox .column:nth-child(1) .bottombox .model-li {
+  margin-top: 0;
+  position: absolute;
+  display: inline-block;
+  font-size: 0.22rem;
+}
+.mainbox .column:nth-child(1) .bottombox .check-label {
+  position: absolute;
+  display: inline-block;
+  left: 4rem;
+  top: 0.42rem;
+}
+.mainbox .column:nth-child(1) .bottombox #addednodes {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 0.25rem;
+}
+.mainbox .column:nth-child(2) {
+  flex: 3;
+  margin-left: 0.125rem;
+  border-radius: 0.125rem;
+  height: 18rem;
+}
+.mainbox .column:nth-child(2) .map {
+  height: 11rem;
+  position: relative;
+  opacity: 0.92;
+}
+.mainbox .column:nth-child(2) .map #showbox {
+  position: absolute;
+  left: 0.125rem;
+  width: 98%;
+  height: 11rem;
+  background-color: whitesmoke;
+  border-radius: 0.125rem;
+}
+.mainbox .column:nth-child(2) #result {
+  position: relative;
+  height: 6rem;
+  border-radius: 0.125rem;
+  padding: 0.5rem 0.7rem;
+  margin: 0.5rem 0.125rem;
+  width: 98%;
+  background-color: whitesmoke;
+  opacity: 0.92;
+}
+.selectpicker {
+  height: 100%;
+}
+#ball {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px white solid;
+  text-align: center;
+  font-weight: bold;
+  background-color: skyblue;
+  overflow: hidden;
+}
+#ball::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40%;
+  left: -25%;
+  top: -100%;
+  animation: swing 3s linear infinite;
+}
+#ball::after {
+  content: "校车行进中";
+  display: block;
+  position: absolute;
+  width: 100%;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  top: 15%;
+}
+@keyframes swing {
+  to {
+    transform: rotate(360deg);
+  }
+}

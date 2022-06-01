@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园导览系统</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./layer/theme/default/layer.css" />
+</head>
+
+<body>
+    <header>
+        <h1>校园导览系统</h1>
+        <div class="showTime"></div>
+        <script>
+            var t = setTimeout(time, 1000);
+
+            function time() {
+                clearTimeout(t);
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours();
+                var m = dt.getMinutes();
+                var s = dt.getSeconds();
+                document.querySelector(".showTime").innerHTML = y + '年' + mt + '月' + day + '日' + ' - ' + h + ' : ' + m + ' : ' + s;
+                t = setTimeout(time, 1000);
+            }
+        </script>
+    </header>
+    <!-- 页面主体 -->
+    <section class="mainbox">
+        <div class="column">
+            <div class="topbox">
+                <p>导览选项</p>
+                <div class="input-list">
+                    <span class="input-span">当前校区：</span>
+                    <select class="selectlist" id="campus" data-actions-box="true" data-live-search="true"
+                        data-live-search-placeholder="请选择校区">
+                    </select>
+                </div>
+                <div class="input-list">
+                    <span class="input-span">出发点：</span>
+                    <select class="selectlist" id="start"> </select>
+                </div>
+                <div class="input-list">
+                    <span class="input-span">目的地：</span>
+                    <select class="selectlist" id="target"> </select>
+                </div>
+                <div class="input-list">
+                    <span class="input-span">出行方式：</span>
+                    <select class="selectlist" id="methods"> </select>
+                </div>
+                <div class="input-list">
+                    <span class="input-span">寻路优先级：</span>
+                    <select class="selectlist" id="priority"> </select>
+                </div>
+
+                <div class='container'>
+                    <span class="input-span">时间倍率：</span>
+                    <input type="button" value="-" id="decrease" onclick="decrease()"></input>
+                    <input type="text" value="1" id="getnumber" onBlur="getnumber()"></input>
+                    <input type="button" value="+" id="increase" onclick="increase()"></input>
+                </div>
+
+                <div class="container">
+                    <button class="btn btn-outline-primary button-confirm" id="Confirm">确认</button>
+                    <button class="btn btn-outline-danger button-reset" id="Rechange">更改终点</button>
+                </div>
+            </div>
+
+            <div class="bottombox">
+                <li class="model-li">选点寻路模式：</li>
+                <label class=check-label>
+                    <input type="checkbox" onclick="modelChange(this)" id="modelsp">
+                    <span></span>
+                    <i class="indicator"> </i>
+                </label>
+                <span id='addednodes'>当前为普通寻路模式</span>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="map" id="mapbox">
+
+                <div id="showbox"></div>
+
+            </div>
+
+            <div id="result">
+                <p>寻路结果</p>
+                <li id="road">推荐路径：</li>
+                <li id="distance">路径长度：</li>
+                <li id="timecost">耗费时间：</li>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/dataTool.min.js"></script>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/flexible.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./layer/layer.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
